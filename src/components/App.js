@@ -1,28 +1,23 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/index.css";
-import {CreateBackupButton, PurgeBackupButton, SearchBackupButton} from './Button'
-import NavigationBar from '../components/Navigation';
+import HomePage from '../components/HomePage';
 import { Route, Switch } from "react-router-dom";
 import SearchBackup from "../components/SearchBackup"
 import { withRouter } from 'react-router-dom';
 
-
+/**
+ * This component renders the whole application
+ */
 class App extends React.Component {
   
   render() {
-    console.log(this.props);
     return(
       <div>
         <main>
-          <NavigationBar/>
-          <CreateBackupButton/>
-          <PurgeBackupButton/>
-          <SearchBackupButton/>
-          
           <Switch>
+            <Route path="/" component={HomePage} exact/>
             <Route path="/search" component={SearchBackup}/>
-            
           </Switch>
         </main>
       </div>
