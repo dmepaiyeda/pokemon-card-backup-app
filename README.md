@@ -1,4 +1,4 @@
-## Pokemon Card Backup 
+## Pokemon Card Backup App
 
 This web application manages a backup for Pokémon cards using the [Pokémon TCG API](https://docs.pokemontcg.io/).
 
